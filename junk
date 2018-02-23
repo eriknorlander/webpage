@@ -1,0 +1,28 @@
+
+/*
+ <b>Bold</b><br />
+		<big>Big</big><br />
+
+		<blockquote>Indent this text and style</blockquote><br />
+
+		<center>Center me please</center>
+		<em>I like italic</em>
+		<i>me too</i>
+
+
+		<h2> I know HTML </h2>
+		<h2> How To Meet Ladies </h2>
+
+    <form action="mail2.php" method="post">
+			<b> Send message to this email</br><br />
+				<input type="text" name="email" size=40><br />
+				<select name="selectinput">
+					<option value ="loveselect">I love </option>
+					<option value = "hateselect"> I hate </option>
+				</select>
+
+				<input type="hidden" name="Submitted" value="True" />
+
+		<input type="submit" value="Send" />
+		</form>
+*/
