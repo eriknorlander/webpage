@@ -43,12 +43,6 @@ if(isset($_POST['submit'])) {
         } else {
             $used = trim($_POST['used']);
         }
-
-        if(empty($_POST['car_id'])){
-            $data_missing[] = 'ID';
-        } else {
-            $id = trim($_POST['car_id']);
-        }
         /*Done with that
         */
 
@@ -67,7 +61,29 @@ if(isset($_POST['submit'])) {
             $affected_rows = mysqli_stmt_affected_rows($stmt);
 
             if($affected_rows == 1){
-                echo 'Car Model added';
+                echo 'Car Model added <br />';
+                echo '<table align="left"
+                cellspacing="5" cellpadding="8">
+
+                <tr><td align="left"><b>Brand</b></td>
+                <td align="left"><b>Model</b></td>
+                <td align="left"><b>Country</b></td>
+                <td align="left"><b>Year</b></td>
+                <td align="left"><b>Price</b></td>
+                <td align="left"><b>Used</b></td>';
+
+                echo '<tr><td align="left">' .
+                $brand . '</td><td align="left">' .
+                $model . '</td><td align="left">' .
+                $country . '</td><td align="left">' .
+                $year . '</td><td align="left">' .
+                $price . '</td><td align="left">' .
+                $used . '</td><td align="left">';
+
+                echo '</tr>';
+
+
+
                 mysqli_stmt_close($stmt);
                 mysqli_close($dbc);
             } else {
@@ -87,3 +103,4 @@ if(isset($_POST['submit'])) {
 ?>
 
 </html>
+
