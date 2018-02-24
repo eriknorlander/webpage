@@ -4,10 +4,12 @@
 
 <body>
 <?php
+
 if(isset($_POST['submit'])) {
     $data_missing = array();
         /* Checking all the possible attributes.
         */
+
         if(empty($_POST['brand'])) {
             $data_missing[] = 'Brand';
         } else {
@@ -46,7 +48,13 @@ if(isset($_POST['submit'])) {
         /*Done with that
         */
 
+
         if(empty($data_missing)){
+            /* JSON-conversion */
+            $extra = array('brand'=>$_POST['brand'], 'model'=>$_POST['model'],'country'=>$_POST['country'],
+                          'year'=>$_POST['year'], 'price'=>$_POST['price'], 'used'=>$_POST['used']);
+            $array_data[] = $extra;
+            $final_data = json_encode($array_data);
 
             require_once('mysqli_connect.php');
 
@@ -61,6 +69,7 @@ if(isset($_POST['submit'])) {
             $affected_rows = mysqli_stmt_affected_rows($stmt);
 
             if($affected_rows == 1){
+
                 echo 'Car Model added <br />';
                 echo '<table align="left"
                 cellspacing="5" cellpadding="8">
@@ -82,8 +91,6 @@ if(isset($_POST['submit'])) {
 
                 echo '</tr>';
 
-
-
                 mysqli_stmt_close($stmt);
                 mysqli_close($dbc);
             } else {
@@ -103,4 +110,3 @@ if(isset($_POST['submit'])) {
 ?>
 
 </html>
-
