@@ -16,7 +16,6 @@ cellspacing="5" cellpadding="8">
 <td align="left"><b>ID</b></td>
 <td align="left"><b>Birth date</b></td>
 <td align="left"><b>Email</b></td>
-<td align="left"><b>Sales</b></td>
 <td align="left"><b>Adress</b></td>
 <td align="left"><b>Phone</b></td>';
 
@@ -30,8 +29,7 @@ $row['last_name'] . '</td><td align="left">' .
 $row['employee_id'] . '</td><td align="left">' .
 $row['birth_date'] . '</td><td align="left">' .
 $row['email'] . '</td><td align="left">' .
-$row['sales'] . '</td><td align="left">' .
-$row['Adress'] . '</td><td align="left">' .
+$row['adress'] . '</td><td align="left">' .
 $row['mobile_phone'] . '</td><td align="left">' ;
 
 echo '</tr>';
