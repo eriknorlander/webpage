@@ -21,29 +21,34 @@ cellspacing="5" cellpadding="8">
 
 // mysqli_fetch_array will return a row of data from the query
 // until no further data is available
-while($row = mysqli_fetch_array($response)){
+    while($row = mysqli_fetch_array($response)){
 
-echo '<tr><td align="left">' .
-$row['brand'] . '</td><td align="left">' .
-$row['model'] . '</td><td align="left">' .
-$row['country'] . '</td><td align="left">' .
-$row['year'] . '</td><td align="left">' .
-$row['price'] . '</td><td align="left">' .
-$row['used'] . '</td><td align="left">' .
-$row['car_id'] . '</td><td align="left">';
+        echo '<tr><td align="left">' .
+        $row['brand'] . '</td><td align="left">' .
+        $row['model'] . '</td><td align="left">' .
+        $row['country'] . '</td><td align="left">' .
+        $row['year'] . '</td><td align="left">' .
+        $row['price'] . '</td><td align="left">' .
+        $row['used'] . '</td><td align="left">' .
+        $row['car_id'] . '</td><td align="left">';
 
-echo '</tr>';
-}
+        echo '</tr>';
+    }
 
 echo '</table>';
 
 } else {
 
-echo "Couldn't issue database query<br />";
+    echo "Couldn't issue database query<br />";
 
-echo mysqli_error($dbc);
-
+    echo mysqli_error($dbc);
 }
+$html_content="<p>hello this is sample text";
+$json_array=array(
 
+  'content'=>50,
+  'html_content'=>$html_content
+);
 
 ?>
+
