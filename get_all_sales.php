@@ -3,8 +3,6 @@ require_once('mysqli_connect.php');
 
 $query = "SELECT * FROM employees";
 $response = @mysqli_query($dbc, $query);
-
-
 // If the query executed properly proceed
 if($response){
 
@@ -30,9 +28,10 @@ $row['last_name'] . '</td><td align="left">' .
 $row['employee_id'] . '</td><td align="left">' .
 $row['birth_date'] . '</td><td align="left">' .
 $row['email'] . '</td><td align="left">' .
-$row['Adress'] . '</td><td align="left">' .
+$row['adress'] . '</td><td align="left">' .
 $row['sales'] . '</td><td align = "left">' .
 $row['mobile_phone'] . '</td><td align="left">' ;
+
 
 echo '</tr>';
 }
