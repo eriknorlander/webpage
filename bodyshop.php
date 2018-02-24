@@ -5,7 +5,7 @@
 		</style>
 
 		<meta name = "description" content = "Welcome to The Body Shop"/>
-		<meta name = "keywords" content = "Cars,Wheels,Fun" />
+		<meta name = "keywords" content = "Cars, Wheels, Fun" />
 		<meta name = "author" content = "Erik Norlander"/>
 
 		<title>Welcome to The Body Shop</title>
@@ -14,7 +14,7 @@
 <body>
 
 		<h1> Welcome to the Body Shop </h1>
-    <h2> What would you want to know? </h2>
+    <h2> What would you like to know? </h2>
 
 		<form action ="http://localhost/get_employees.php/"  method="post">
 
@@ -50,22 +50,18 @@
         <p> Used:
             <input type="text" name="used" size = "30" value="" />
         </p>
-        <p> ID:
-            <input type="text" name="car_id" size = "30" value="" />
-        </p>
 
         <p>
   		      <input type="submit" name="submit" value="New Car Model" />
         </p>
     </form>
 
-    <form action ="http://localhost/get_employees.php/"  method="post">
+    <form action ="http://localhost/get_all_sales.php/"  method="post">
 
         <input type="hidden" name="Submitted" value="True" />
 
   		  <input type="submit" value="Get All Sales">
     </form>
-
 </body>
 
 </html>
